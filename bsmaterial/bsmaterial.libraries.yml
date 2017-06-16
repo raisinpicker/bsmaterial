@@ -1,0 +1,14 @@
+global-styling:
+  css:
+    theme:
+      css/bsmaterial.min.css: {}
+bootstrap-scripts:
+  js:
+    js/bsmaterial.min.js: {}
+roboto:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Roboto:300,400,600': { type: external, minified: true }
+  license:
+    name: SIL Open Font License 1.1
+    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
