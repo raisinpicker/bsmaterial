@@ -22,4 +22,5 @@ regions:
 libraries:
   - 'bsmaterial/global-styling'
   - 'bsmaterial/roboto'
+  - 'bsmaterial/material-icons'
   - 'bsmaterial/bootstrap-scripts'
