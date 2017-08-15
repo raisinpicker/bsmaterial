@@ -25,6 +25,14 @@ function bsmaterial_form_alter(&$form, FormStateInterface $form_state, $form_id)
   }
 }
 
+/**
+ * Preprocess variables for the menu local task template.
+ * @param $variables
+ */
+function bsmaterial_preprocess_menu_local_task(&$variables) {
+  $variables['element']['#link']['url']->setOption('attributes', array('class' => array('btn btn-sm btn-raised')));
+}
+
 /*
 show rating field als html 5 slider
 
@@ -149,13 +157,7 @@ function bootstrap_material_bootstrap_colorize_text_alter(&$texts) {
 }
  */
 
-/**
- * hook_preprocess_flag
 
-function bootstrap_material_preprocess_flag(&$variables) {
-  $variables['flag_classes_array'][] = 'btn btn-primary';
-}
- */
 
  /**
  * hook_preprocess_views_view

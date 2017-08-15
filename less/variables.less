@@ -22,11 +22,9 @@
 @icon-color: rgba(0,0,0,0.5);
 
 
-@mdb-label-color: ~"rgba(@{rgb-black}, 0.26)";
-@mdb-label-color-toggle-focus: ~"rgba(@{rgb-black}, .54)";
+@mdb-label-color: @primary-400; // ~"rgba(@{rgb-black}, 0.26)";
+@mdb-label-color-toggle-focus: @primary-700; // ~"rgba(@{rgb-black}, .54)";
 
-
-//---
 // Converted bs variables
 
 // Bootstrap brand color customization
@@ -44,11 +42,9 @@
 @headings-font-weight: 400;
 
 @body-bg: #EEEEEE;
-//---
 
 // Bootstrap Material Design variables start with mdb-
 @mdb-brand-inverse: @indigo;
-
 
 /* ANIMATION */
 @mdb-animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,12 +152,12 @@
 @mdb-btn-font-size-xs: 12px;
 
 
-@mdb-btn-background-color: @primary-500; 
-@mdb-btn-background-color-text: @primary-50;
+@mdb-btn-background-color: @body-bg; 
+@mdb-btn-background-color-text: @primary-200;
 
 
 @mdl-btn-border-radus: 2px;
-//@mdb-btn-primary-color: ~"rgba(@{rgb-grey-500}, 0.20)";
+@mdb-btn-primary-color: @primary-700; // ~"rgba(@{rgb-grey-500}, 0.20)";
 
 @mdb-btn-fab-size: 38px;
 @mdb-btn-fab-size-mini: 22px;

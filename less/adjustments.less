@@ -6,11 +6,38 @@
 /**
  * Overrides defined in bootstrap starterkit.
  */
+a:focus, a:hover {
+  text-decoration: none;
+}
+.label a {
+  color: white;
+}
 ol, ul {
   padding-left: 1.5em;
   .popover &:last-child {
     margin-bottom: 0;
   }
+}
+.largetext {
+  font-size: 18px;
+}
+.field--label {
+  color: @primary-400; 
+}
+.material-icons.small {
+  font-size: 20px;
+}
+h3.panel-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.gridmargin {
+  margin-bottom: 15px;
+}
+.panel-footer {
+    background-color: white;
+    padding: 0 15px;
 }
 // Page header.
 .page-header {
@@ -24,11 +51,11 @@ ol, ul {
   border-top: 1px solid #E5E5E5;
 }
 // Paragraphs.
-p:last-child,
+/* p:last-child,
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
-}
+} 
 // Help region.
 .region-help {
   > .glyphicon {
@@ -49,7 +76,7 @@ p:last-child,
     margin-top: 0;
   }
 }
-
+*/
 
 /**
  * optimize for big displays
@@ -72,11 +99,15 @@ p:last-child,
  body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 400;
 }
-
+.unflag-action {
+  background-color: @primary !important;
+  color: @primary-50 !important;
+} 
+/*
 .row-action-primary {
   float: left;
   margin-left: -45px;
-}
+} 
 .row-button {
   float: left;
   margin-left: -45px;
@@ -86,21 +117,49 @@ p:last-child,
   top: 8px;
   right: 0;
 }
+
 .form-group {
   margin: 0;
 }
+*/
 /**
  * Icons and Colors
  */
-.btn.btn-fab.rate1 { background-color: #F44336; } 
-.btn.btn-fab.rate2 { background-color: #F57C00; } 
-.btn.btn-fab.rate3 { background-color: #FFB300; }
-.btn.btn-fab.rate4 { background-color: #9E9D24; }
-.btn.btn-fab.rate5 { background-color: #388E3C; }
-.btn.btn-fab.rate6 { background-color: #009688; } 
-.btn.btn-fab.rate7 { background-color: #2196F3; } 
-.btn.btn-fab.rate8 { background-color: #3F51B5; } 
-.btn.btn-fab.rate9 { background-color: #673AB7; }
+.row-action-primary {
+  //float: left; WARNING: float can't be used with display: inline-block. Certain properties shouldn't be used with certain display property values. (display-property-grouping) Browsers: All
+  display: inline-block;
+  padding-right: 16px;
+  i, label {
+    display: block;
+    width: 36px;
+    height: 36px;
+    font-size: 30px;
+  }
+}
+/*
+i.material-icons.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-12px, -12px);
+    -ms-transform: translate(-12px, -12px);
+    -o-transform: translate(-12px, -12px);
+    transform: translate(-12px, -12px);
+    line-height: 24px;
+    width: 24px;
+    background-color: #f44336;
+    color: rgba(255,255,255, 0.84);
+}
+*/
+[rating="1"] { background-color: #F44336 !important; } 
+[rating="2"] { background-color: #F57C00 !important; } 
+[rating="3"] { background-color: #FFB300 !important; }
+[rating="4"] { background-color: #9E9D24 !important; }
+[rating="5"] { background-color: #388E3C !important; }
+[rating="6"] { background-color: #009688 !important; } 
+[rating="7"] { background-color: #2196F3 !important; } 
+[rating="8"] { background-color: #3F51B5 !important; } 
+[rating="9"] { background-color: #673AB7 !important; }
 
 div[value="1"] .noUi-base .noUi-origin .noUi-handle { background-color: #F44336 !important; } 
 div[value="2"] .noUi-base .noUi-origin .noUi-handle { background-color: #F57C00 !important; } 
@@ -116,7 +175,25 @@ div[value="9"] .noUi-base .noUi-origin .noUi-handle { background-color: #673AB7 
 .person:before, .Person:before {  content: "person";}
 .publication:before, .Publication:before {  content: "book";}
 .event:before, .Event:before {  content: "event";}
-.collection:before, .Collection:before {  content: "view_headline";}
+.collection:before, .Collection:before {  content: "reorder";}
+.place:before, .Place:before {  content: "place";}
+.object:before, .Object:before {  content: "extension";}
+
+.btn.btn-fab.xxl {
+  width: 120px;
+  height: 120px;
+}
+.btn.btn-fab.xxl i.material-icons {
+  top: 50%;
+  left: 50%;
+  transform: translate(-36px,-36px);
+  line-height: 72px;
+  width: 72px;
+  font-size: 72px;
+}
+.btn.btn-raised.btn-default {
+  color: @primary-700;
+}
 
 /* 
  * Module rp_slider
@@ -268,10 +345,77 @@ div[value="9"] .noUi-base .noUi-origin .noUi-handle { background-color: #673AB7 
 .chosen-container.chosen-container-multi.chosen-disabled .chosen-choices {
   background-color: #EEE;
   color: black; }
-  .chosen-container.chosen-container-multi.chosen-disabled .chosen-choices li.search-choice {
-    padding-right: 5px;
-    background-color: #EEE; }
-    .chosen-container.chosen-container-multi.chosen-disabled .chosen-choices li.search-choice .search-choice-close {
-      display: none; }
+.chosen-container.chosen-container-multi.chosen-disabled .chosen-choices li.search-choice {
+  padding-right: 5px;
+  background-color: #EEE; }
+.chosen-container.chosen-container-multi.chosen-disabled .chosen-choices li.search-choice .search-choice-close {
+  display: none; }
 
 
+/* ------------- Taxonomy terms in reference tree ------------- */
+ul.term,
+ul.term ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+ul.term ul {
+  margin-left:10px; /* indentation */
+  position:relative;
+}
+ul.term ul:before {
+  content:"";
+  display:block;
+  width:0;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  border-left:1px solid;
+}
+ul.term li {
+  margin: 0 0 0 0;
+  padding:4px 12px 0 10px; /* indentation + 2 */
+  font-size: 1em;
+  line-height:20px; /* default list item `line-height` */
+  position:relative;
+}
+ul.term ul li:before {
+  content:"";
+  display:block;
+  width:10px; /* same with indentation */
+  height:0;
+  border-top:1px solid;
+  position:absolute;
+  top:10px;
+  left:0;
+}
+ul.term ul li:last-child:before {
+  background: #fff; /* same with body background */
+  height:auto;
+  top:10px; /* (line-height/2) */
+  bottom:0;
+}
+ul.term li a {
+  font-weight: 400;
+  border-radius: 1px;
+  padding: .3em .6em;
+  background-color: @primary-300;
+  display: inline;
+  line-height: 1;
+  color: @primary-50;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+ul.term li.selected a {
+    font-weight: 400;
+  color: @primary-50;
+  background-color: @primary-500;
+  &:hover {
+    background: darken(@primary-500, 20%);  
+  }
+}
+ul.term li a:hover {
+  text-decoration: none;
+}
