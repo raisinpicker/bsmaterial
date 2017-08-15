@@ -8,23 +8,23 @@ module.exports = function(grunt) {
           paths: ["css"]
         },
         files: {
-          "bsmaterial/css/bsmaterial.css": "less/settings.less"
+          "css/bsmaterial.css": "less/settings.less"
         }
       }
     },
     cssmin: {
       files: {
         expand: true,
-        cwd: 'bsmaterial/css',
+        cwd: 'css',
         src: ['*.css', '!*.min.css'],
-        dest: 'bsmaterial/css',
+        dest: 'css',
         ext: '.min.css'
       }
     },
     concat: {
       dist: {
         src: ['node_modules/bootstrap-material-design/dist/js/ripples.min.js', 'node_modules/bootstrap-material-design/dist/js/material.min.js'],
-        dest: 'bsmaterial/js/bsmaterial.min.js'
+        dest: 'js/bsmaterial.min.js'
       }
     },
     watch: {

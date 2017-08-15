@@ -10122,7 +10122,7 @@ div[value="9"] .noUi-base .noUi-origin .noUi-handle {
 }
 .collection:before,
 .Collection:before {
-  content: "shopping_basket";
+  content: "reorder";
 }
 .place:before,
 .Place:before {
@@ -10130,7 +10130,7 @@ div[value="9"] .noUi-base .noUi-origin .noUi-handle {
 }
 .object:before,
 .Object:before {
-  content: "crop_square";
+  content: "extension";
 }
 .btn.btn-fab.xxl {
   width: 120px;
