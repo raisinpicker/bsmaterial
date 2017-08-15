@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a dropbutton wrapper.
+ *
+ * Available variables:
+ * - children: Contains the child elements of the dropbutton menu.
+ *
+ * @see template_preprocess()
+ *
+ * @ingroup themeable
+ */
+ {% if children %}
+  {% spaceless %}
+    <div class="dropbutton-wrapper">
+      <div class="dropbutton-widget">
+        {{ children }}
+      </div>
+    </div>
+  {% endspaceless %}
+{% endif %}
+#}
+
+{% if children %}
+  {% spaceless %}
+    <div class="btn-group">
+      <a href="javascript:void(0)" class="btn btn-primary btn-raised">asdf</a>
+      <a href="bootstrap-elements.html" data-target="#" class="btn btn-primary btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+      <ul class="dropdown-menu">
+      	{{ children }}
+      </ul>
+    </div>
+  {% endspaceless %}
+{% endif %}
