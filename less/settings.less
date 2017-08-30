@@ -6,14 +6,14 @@
 @import "../node_modules/bootstrap/less/variables.less";
 @import "../node_modules/bootstrap-material-design/less/_variables.less";
 @import "variables.less";
-
-// Mixins.
 @import "../node_modules/bootstrap/less/mixins.less";
 
 // Reset and dependencies
 @import "../node_modules/bootstrap/less/normalize.less";
 @import "../node_modules/bootstrap/less/print.less";
-@import "../node_modules/bootstrap/less/glyphicons.less";
+// @import "../node_modules/bootstrap/less/glyphicons.less";
+// Set the proper directory for the Bootstrap Glyphicon font.
+//@icon-font-path: '../node_modules/bootstrap/fonts/';
 
 // Core CSS
 @import "../node_modules/bootstrap/less/scaffolding.less";
@@ -23,7 +23,6 @@
 @import "../node_modules/bootstrap/less/tables.less";
 @import "../node_modules/bootstrap/less/forms.less";
 @import "../node_modules/bootstrap/less/buttons.less";
-
 // Components
 @import "../node_modules/bootstrap/less/component-animations.less";
 @import "../node_modules/bootstrap/less/dropdowns.less";
@@ -46,29 +45,21 @@
 @import "../node_modules/bootstrap/less/responsive-embed.less";
 @import "../node_modules/bootstrap/less/wells.less";
 @import "../node_modules/bootstrap/less/close.less";
-
 // Components w/ JavaScript
 @import "../node_modules/bootstrap/less/modals.less";
-@import "../node_modules/bootstrap/less/tooltip.less";
-@import "../node_modules/bootstrap/less/popovers.less";
+//@import "../node_modules/bootstrap/less/tooltip.less";
+//@import "../node_modules/bootstrap/less/popovers.less";
 @import "../node_modules/bootstrap/less/carousel.less";
-
 // Utility classes
 @import "../node_modules/bootstrap/less/utilities.less";
 @import "../node_modules/bootstrap/less/responsive-utilities.less";
-
-// Set the proper directory for the Bootstrap Glyphicon font.
-//@icon-font-path: '../node_modules/bootstrap/fonts/';
-
 // Import Bootstrap Material
 @import "../node_modules/bootstrap-material-design/less/_variables.less";
 @import "../node_modules/bootstrap-material-design/less/_mixins.less";
 @import "../node_modules/bootstrap-material-design/less/_shadows.less";
 @import "../node_modules/bootstrap-material-design/less/_core.less";
 @import "../node_modules/bootstrap-material-design/less/ripples.less";
-
 // Import Drupal specific adjustments
 @import "adjustments.less";
-
-// Import individual fixes
-//@import "fixes.less";
+// Import custom css
+// @import "custom.less";
