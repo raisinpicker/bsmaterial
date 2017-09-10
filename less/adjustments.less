@@ -50,6 +50,9 @@ h3.panel-title {
   padding-bottom: 36px;
   border-top: 1px solid #E5E5E5;
 }
+b, strong {
+  font-weight: 500;
+}
 // Paragraphs.
 /* p:last-child,
 .form-group:last-child,
@@ -103,6 +106,13 @@ h3.panel-title {
   background-color: @primary !important;
   color: @primary-50 !important;
 } 
+
+.panel-default>.panel-heading, .panel-heading .btn {
+  color: @primary-50;
+}
+.panel-heading .btn {
+  margin: 0;
+}
 /*
 .row-action-primary {
   float: left;
@@ -384,7 +394,7 @@ ul.term li {
   margin: 0 0 0 0;
   padding:4px 12px 0 10px; /* indentation + 2 */
   font-size: 1em;
-  line-height:20px; /* default list item `line-height` */
+  line-height:24px; /* default list item `line-height` */
   position:relative;
 }
 ul.term ul li:before {
