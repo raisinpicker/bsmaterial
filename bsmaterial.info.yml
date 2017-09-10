@@ -24,3 +24,14 @@ libraries:
   - 'bsmaterial/roboto'
   - 'bsmaterial/material-icons'
   - 'bsmaterial/bootstrap-scripts'
+
+  # Remove css from datatable module because it interferes with material design theme
+libraries-override:
+  datatables/datatables_core:
+    css:
+      component:
+        /libraries/datatables/media/css/demo_table.css: false
+  datatables/datatables_tabletools:
+    css:
+      component:
+        /libraries/datatables/extras/TableTools/media/css/TableTools.css: false

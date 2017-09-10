@@ -30,8 +30,14 @@ function bsmaterial_form_alter(&$form, FormStateInterface $form_state, $form_id)
  * @param $variables
  */
 function bsmaterial_preprocess_menu_local_task(&$variables) {
-  $variables['element']['#link']['url']->setOption('attributes', array('class' => array('btn btn-sm btn-raised')));
+  $variables['element']['#link']['url']->setOption('attributes', array('class' => array('btn btn-primary btn-sm')));
 }
+
+/**
+
+ 
+
+
 
 /*
 show rating field als html 5 slider
