@@ -1,29 +1,23 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 		<h3 class="panel-title">
-			<a href="{{ url }}" class="btn btn-fab btn-primary" rating="{{ node.field_rating.value }}"><i class="material-icons {{ node.bundle() }} "></i></a>
-			<a href="{{ url }}">{{ node.label }} </a>
+			<a href="/node/{{ node.id }}" class="btn btn-fab btn-primary" rating="{{ node.field_rating.value }}"><i class="material-icons {{ node.bundle() }} "></i></a>
+			<a href="/node/{{ node.id }}">{{ node.label }} </a>
 		</h3>
 		{{ content.field_elements }}
-
-		{% for item in content.field_tags %}
-      		{% if item['#title'] %}
-        		<span class="label label-primary">{{ item['#title']  }}</div>
-      		{% endif %}
-    	{% endfor %}
-
+		{{ content.field_tags }}
 	</div>
 	<div class="panel-footer">
-		<a href="/node/{{ node.id }}/edit" title="Edit node" class="btn btn-xs">
+		<a href="/node/{{ node.id }}/edit" title="Edit node" class="btn btn-xs btn-primary">
 			<i class="material-icons small">edit</i>
 		</a> 
-		<a href="#" title="Create copy of this node" class="btn btn-xs">
+		<a href="#" title="Create copy of this node" class="btn btn-xs btn-primary">
 			<i class="material-icons small">content_copy</i>
 		</a>	 
-		<a href="/node/{{ node.id }}/delete" title="Delete node" class="btn btn-xs">
+		<a href="/node/{{ node.id }}/delete" title="Delete node" class="btn btn-xs btn-primary">
 			<i class="material-icons small">delete</i>
 		</a> 
-		<a href="/node/add/relation" class="use-ajax btn btn-xs" data-dialog-type="modal"  title="Create relation">
+		<a href="/node/add/relation" class="use-ajax btn btn-xs btn-primary" data-dialog-type="modal"  title="Create relation">
 			<i class="material-icons small">link</i>
 		</a>	
 	</div>
