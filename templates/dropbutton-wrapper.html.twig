@@ -10,24 +10,46 @@
  *
  * @ingroup themeable
  */
- {% if children %}
+
+{% if children %}
   {% spaceless %}
-    <div class="dropbutton-wrapper">
-      <div class="dropbutton-widget">
-        {{ children }}
-      </div>
+    <div class="paragraphs-dropbutton-wrapper">
+      {{ children }}
     </div>
   {% endspaceless %}
 {% endif %}
+
+
+
+{% spaceless %}
+  {%
+    set classes = [
+      'btn',
+    ]
+  %}
+  {% block input %}
+        <button{{ attributes.addClass(classes) }}>{{ label }}</button>{{ children }}
+    {%
+      set classes = [
+        'btn',
+        'dropdown-toggle',
+      ]
+    %}
+    <button{{ split_button_attributes.addClass(classes) }} type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="caret"></span>
+      <span class="sr-only">{{ 'Toggle Dropdown'|t }}</span>
+    </button>
+    {{ children }}
+  {% endblock %}
+{% endspaceless %}
 #}
 
 {% if children %}
   {% spaceless %}
     <div class="btn-group">
-      <a href="javascript:void(0)" class="btn btn-primary btn-raised">asdf</a>
-      <a href="bootstrap-elements.html" data-target="#" class="btn btn-primary btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+      <a href="javascript:void(0)" data-target="#" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></a>
       <ul class="dropdown-menu">
-      	{{ children }}
+        {{ children }}
       </ul>
     </div>
   {% endspaceless %}

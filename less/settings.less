@@ -3,7 +3,6 @@
  */
 
 // Variables
-@import "../node_modules/bootstrap/less/variables.less";
 @import "../node_modules/bootstrap-material-design/less/_variables.less";
 @import "variables.less";
 @import "../node_modules/bootstrap/less/mixins.less";
@@ -54,29 +53,108 @@
 @import "../node_modules/bootstrap/less/utilities.less";
 @import "../node_modules/bootstrap/less/responsive-utilities.less";
 // Import Bootstrap Material
-@import "../node_modules/bootstrap-material-design/less/_variables.less";
 @import "../node_modules/bootstrap-material-design/less/_mixins.less";
 @import "../node_modules/bootstrap-material-design/less/_shadows.less";
-@import "../node_modules/bootstrap-material-design/less/_core.less";
+//@import "../node_modules/bootstrap-material-design/less/_core.less";
+
+body {
+  background-color: @body-bg;
+  &.inverse {
+    background: #333333;
+    &, .form-control {
+      color: @mdb-text-color-light;
+    }
+    .modal,
+    .panel-default,
+    .card {
+      &,
+      .form-control {
+        background-color: initial;
+        color: initial;
+      }
+    }
+
+  }
+}
+
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+  font-family: @font-family-sans-serif;
+  font-weight: 300;
+}
+
+h5, h6{
+  font-weight: 400;
+}
+
+a, a:hover, a:focus {
+  color: @link-color;
+
+  & .material-icons {
+    vertical-align: middle;
+  }
+}
+
+//@import "../node_modules/bootstrap-material-design/less/_form.less";
+@import "../node_modules/bootstrap-material-design/less/_welljumbo.less";
+@import "../node_modules/bootstrap-material-design/less/_buttons.less";
+//@import "../node_modules/bootstrap-material-design/less/_checkboxes.less";
+//@import "../node_modules/bootstrap-material-design/less/_togglebutton.less";
+//@import "../node_modules/bootstrap-material-design/less/_radios.less";
+//@import "../node_modules/bootstrap-material-design/less/_inputs.less";
+
+legend {
+  border-bottom: 0;
+}
+
+@import "../node_modules/bootstrap-material-design/less/_lists.less";
+@import "../node_modules/bootstrap-material-design/less/_navbar.less";
+
+.dropdown-menu {
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  .divider {
+    background-color: rgba(0, 0, 0, .12);
+  }
+  li {
+    overflow: hidden;
+    position: relative;
+    a:hover {
+      background-color: transparent;
+      color: @brand-primary;
+    }
+  }
+}
+
+@import "../node_modules/bootstrap-material-design/less/_alerts.less";
+@import "../node_modules/bootstrap-material-design/less/_progress.less";
+@import "../node_modules/bootstrap-material-design/less/_typography.less";
+@import "../node_modules/bootstrap-material-design/less/_tabs.less";
+@import "../node_modules/bootstrap-material-design/less/_popups.less";
+@import "../node_modules/bootstrap-material-design/less/_cards.less";
+@import "../node_modules/bootstrap-material-design/less/_dialogs.less";
+@import "../node_modules/bootstrap-material-design/less/_panels.less";
+@import "../node_modules/bootstrap-material-design/less/_dividers.less";
+
+// Prevent highlight on mobile
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+@import "../node_modules/bootstrap-material-design/less/_themes.less";
+
+// External plugins
+@import "../node_modules/bootstrap-material-design/less/_plugins.less";
+
+
+
 @import "../node_modules/bootstrap-material-design/less/ripples.less";
 
-@import "component/alert";
-@import "component/ajax";
-@import "component/field";
-@import "component/file";
-@import "component/filter";
-@import "component/form";
-@import "component/icon";
-@import "component/navbar";
-@import "component/node";
-@import "component/panel";
-@import "component/progress-bar";
-@import "component/table-drag";
-@import "component/tabs";
-@import "component/toolbar";
-
-// jQuery UI style overrides.
-@import "jquery-ui/autocomplete";
 // Import Drupal specific adjustments
 @import "adjustments.less";
 // Import custom css
