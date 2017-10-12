@@ -35,3 +35,11 @@ libraries-override:
     css:
       component:
         /libraries/datatables/extras/TableTools/media/css/TableTools.css: false
+  ds/ds_2col_stacked:
+    css:
+      theme:
+        css/ds-2col-stacked.css: false
+  chosen/drupal.chosen:
+    css:
+      component:
+        css/chosen-drupal.css: false

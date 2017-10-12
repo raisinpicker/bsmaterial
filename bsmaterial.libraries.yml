@@ -11,13 +11,13 @@ bootstrap-scripts:
     js/collapse.js: {}
     js/dropdown.js: {}
     js/modal.js: {}
-#    js/tooltip.js: {}
-#    js/popover.js: {}
     js/scrollspy.js: {}
     js/tab.js: {}
     js/transition.js: {}
     js/bsmaterial.min.js: {}
     js/custom.js: {}
+    js/tooltip.js: {}
+#    js/popover.js: {}
 roboto:
   css:
     theme:
