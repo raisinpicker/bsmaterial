@@ -17,7 +17,7 @@ bootstrap-scripts:
     js/bsmaterial.min.js: {}
     js/custom.js: {}
     js/tooltip.js: {}
-#    js/popover.js: {}
+    js/popover.js: {}
 roboto:
   css:
     theme:
